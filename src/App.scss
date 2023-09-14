@@ -1,0 +1,92 @@
+.card h1 span.avatar-one {
+  content: url(./assets/avatar-hero-1.png);
+  width: 80px;
+}
+
+.card h1 span.avatar-two {
+  content: url(./assets/avatar-hero-2.png);
+  width: 90px;
+}
+
+// Card
+
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  position: relative;
+  padding-right: 100px;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#cardCore {
+  position: relative;
+}
+
+#cardCore::after {
+  content: "";
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 90px;
+  height: 300px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(230, 238, 255, 1) 100%
+  );
+}
+
+.card-container {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.cards-container {
+  // Other styles...
+  scroll-behavior: smooth; // Add smooth scrolling behavior
+}
+
+@media screen and (max-width: 768px) {
+  .card h1 span.avatar-one {
+    content: url(./assets/avatar-hero-1.png);
+    width: 50px;
+  }
+
+  .card h1 span.avatar-two {
+    content: url(./assets/avatar-hero-2.png);
+    width: 60px;
+  }
+
+  #cardCore::after {
+    margin-right: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #card {
+    margin-top: 2px;
+  }
+
+  #card-jobOne {
+    margin-top: 100px;
+  }
+
+  #card-job {
+    display: none;
+  }
+  #card-jobTwo {
+    display: none;
+  }
+}

@@ -1,0 +1,38 @@
+.card h1 span.avatar-one {
+  content: url(./assets/avatar-hero-1.png);
+  width: 80px;
+}
+
+.card h1 span.avatar-two {
+  content: url(./assets/avatar-hero-2.png);
+  width: 90px;
+}
+
+@media screen and (max-width: 768px) {
+  .card h1 span.avatar-one {
+    content: url(./assets/avatar-hero-1.png);
+    width: 50px;
+  }
+
+  .card h1 span.avatar-two {
+    content: url(./assets/avatar-hero-2.png);
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #card {
+    margin-top: 2px;
+  }
+
+  #card-jobOne {
+    margin-top: 100px;
+  }
+
+  #card-job {
+    display: none;
+  }
+  #card-jobTwo {
+    display: none;
+  }
+}
